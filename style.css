@@ -1,0 +1,131 @@
+
+*{
+     margin: 0;
+     padding: 0;
+     transition: color .1s, background-color .5s;
+     color: inherit;
+     text-decoration: inherit;
+     box-sizing: border-box;
+}
+
+body{
+    --primary-color: #4FC6CE;
+    --accent-01: #DBDBDB;
+    --accent-02: #98B1BA;
+    --accent-03: #26333A;
+    --accent-04: #1A2328;
+
+    font-family: Calibri, sanse-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content:  center;
+    text-align: center;
+    background-color: var(--accent-04);
+    color: var(--accent-01);
+}
+
+
+body.light {
+    --primary-color: #4FC6CE;
+    --accent-01: #1D3A41;
+    --accent-02: #225B60;
+    --accent-03: #FFFFFF;
+    --accent-04: #D5F3F9;
+}
+
+.container {
+    display: grid;
+    gap: 5px;
+    max-width: 1300px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: var(--accent-03);
+    border-radius: 25px;
+}
+
+
+/* ------Navbar------- */
+
+.navbar {
+    display: grid;
+    gap: 5px;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-auto-columns: max-content;
+    grid-auto-rows: max-content;
+    position: sticky;
+    top: 50px;
+    z-index: 5;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--accent-02);
+}
+
+.navbar > div {
+    padding: 25px 10px;
+}
+
+.navbar ion-icon {
+    font-size: 32px;
+    margin: auto;
+}
+
+.navbar .active,
+.navbar .item:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+
+/* --------PROFILE------- */
+
+
+/*---------------- Responsiveness ---------------*/
+
+/* Desktop */
+@media screen and (width >= 1024px) {
+    .container {
+        grid-template-columns:  85px 430px 1fr;
+    }
+}
+
+/* Tablet */
+@media screen and (width >= 768px) and (width <= 1023px) {
+    .container {
+        grid-template-columns:  85px 1fr;
+        max-width: 650px;
+    }
+}
+
+/* Mobile */
+@media screen and (width <= 769px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        padding: 20px;
+        padding-top: 50px;
+    }
+}
+
+
+
+
+/* ----------------- */
+.divider {
+    height: 2px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.ltr {
+    background: radial-gradient(ellipse at left, var(--accent-02) -70%, transparent 80%);
+}
+
+.rtl {
+    background: radial-gradient(ellipse at right, var(--accent-02) -70%, transparent 80%);
+}
