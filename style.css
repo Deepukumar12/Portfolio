@@ -6,6 +6,7 @@
      color: inherit;
      text-decoration: inherit;
      box-sizing: border-box;
+     /* background-color:#1A2328; */
 }
 
 body{
@@ -20,7 +21,7 @@ body{
     padding: 0;
     height: 100vh;
     justify-content:  center;
-    text-align: center;
+    /* text-align: center; */
     background-color: var(--accent-04);
     color: var(--accent-01);
 }
@@ -84,6 +85,288 @@ body.light {
 
 /* --------PROFILE------- */
 
+.profile {
+    text-align: center;
+    font-size: 20px;
+}
+
+.profile .header {
+    max-height: 40vh;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    clip-path: polygon(100% 0, 100% 80%, 80% 100%, 20% 100%, 0 80%, 0 0);
+}
+
+.profile .img {
+    width: 140px;
+    position: relative;
+    margin: -60px auto 0;
+    border: var(--accent-04) 8px solid;
+    border-radius: 35px;
+}
+
+.profile p {
+    margin-top: 10px;
+    height: 20px;
+}
+
+.profile ul {
+    list-style-type: none;
+    margin: 30px 0 80px 0;
+}
+
+.profile ul li {
+    display: inline;
+}
+
+.profile .footer {
+    position: sticky;
+    top: calc(100vh - 100px);
+}
+
+.profile table {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.profile ion-icon {
+    color: var(--accent-02);
+    transition: color .5s, border-color .5s, background-color .5s;
+    margin-bottom: -7px;
+}
+
+.profile ul ion-icon {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--accent-04);
+}
+
+.profile ul ion-icon:hover {
+    border-color: var(--accent-04);
+}
+
+.profile ion-icon:hover {
+    color: var(--primary-color);
+}
+
+.profile table ion-icon {
+    padding: 5px;
+    border-radius: 10px;
+    transition: color .5s, background-color .5s;
+}
+
+.profile td:hover ion-icon {
+    background-color: var(--primary-color);
+    color: var(--accent-04);
+}
+
+
+
+
+/* ---------------Content---------------- */
+
+.content {
+    padding: 20px 15px 20px 20px;
+}
+
+.content h2 {
+    font-size: 2em;
+}
+
+.content .wrapper {
+    overflow: auto;
+    max-height: 700px;
+    padding-right: 10px;
+    scroll-behavior: smooth;
+}
+
+.content ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.content ::-webkit-scrollbar-track {
+    background: var(--accent-04);
+}
+
+.content ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+.content p {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.colored {
+    color: var(--primary-color);
+}
+
+
+/* ------------Achivements------------ */
+
+section {
+    margin: 30px auto;
+}
+
+.achivements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--accent-04);
+    padding: 20px 30px;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.achivements h3 {
+    font-size: 2.3em;
+}
+
+.achivements ion-icon {
+    margin-bottom: -5px;
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+.achivements p {
+    color: var(--accent-02);
+    line-height: 1.2;
+    font: 15px;
+}
+
+
+/* --------Skills------- */
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    color: var(--accent-02);
+}
+
+.skills > div {
+    background-color: var(--accent-04);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: var(--accent-04) 3px solid;
+    transition: border-color .5s;
+    cursor: pointer;
+}
+
+.skills > div:hover {
+    border-color: var(--primary-color);
+}
+
+.skills ion-icon {
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+.skills .circle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    background: conic-gradient(from 0deg,
+                var(--primary-color) 0%,
+                var(--primary-color) 0% var(--percent),
+                var(--accent-03) var(--percent));
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.skills .circle::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background-color: var(--accent-04);
+    border-radius: 50%;
+}
+
+.skills .circle h4 {
+    position: relative;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 3;
+}
+
+.skills div:nth-child(9) {
+    background-color: inherit;
+}
+
+.skills .progress-bar:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.skills .progress-bar p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills progress {
+    width: 100%;
+    appearance: none;
+    height: 10px;
+}
+
+.skills progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: var(--accent-04);
+}
+
+.skills progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+
+/* Experiences */
+
+.experience {
+    margin: 15px 0;
+}
+
+.experience p {
+    padding-left: 20px;
+    border-left: var(--accent-02) 2px solid;
+    margin-left: 17px;
+    color: var(--accent-02);
+}
+
+
+.experience h4 {
+    padding-left: 25px;
+    position: relative;
+    color: var(--primary-color);
+    margin: 10px;
+}
+
+.experience h4::before {
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 14px;
+    height: 14px;
+    border-radius: 20px;
+    left: 0;
+    top: 5px;
+}
+
+.experience .date {
+    padding: 5px 10px;
+    background-color: var(--accent-04);
+    border-radius: 4px;
+    color: var(--accent-02);
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+/* Contributions */
 
 /*---------------- Responsiveness ---------------*/
 
@@ -92,6 +375,11 @@ body.light {
     .container {
         grid-template-columns:  85px 430px 1fr;
     }
+
+    .skills div:nth-child(9) {
+        grid-column: 1/5;
+        /* grid-column: 3 / span 2; */
+    }
 }
 
 /* Tablet */
@@ -99,6 +387,23 @@ body.light {
     .container {
         grid-template-columns:  85px 1fr;
         max-width: 650px;
+    }
+
+    .content {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .achivements {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .skills div:nth-child(9) {
+        grid-column: 1/4;
     }
 }
 
@@ -110,6 +415,41 @@ body.light {
         padding: 20px;
         padding-top: 50px;
     }
+
+    .navbar {
+        display: inline-grid;
+        grid-template-columns: 85px 1fr;
+        /* padding: 5px; */
+    }
+
+    .nav {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding: 5px;
+    }
+
+    .nav .divider, nav p {
+        display: none;
+    }
+
+    .navbar > div {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+                    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    .achivements {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills div:nth-child(9) {
+        grid-column: 1/3;
+    }
+    
 }
 
 

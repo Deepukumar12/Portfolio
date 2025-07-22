@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- github contributions link in js format -->
+
     <title>My Portfolio</title>
 </head>
 <body class="light">
@@ -14,8 +17,9 @@
         <nav class="navbar">
 
             <div class="box theme">
-                <div class="item">
-                    <ion-icon name="sunny-outline"></ion-icon>
+                <div class="item" onclick="theme()">
+                    <ion-icon id="lightBtn" name="sunny-outline"></ion-icon>
+                    <ion-icon id="darkBtn" name="moon-outline" style="display: none;"></ion-icon>
                 </div>
             </div>
             <div class="box nav">
@@ -67,14 +71,173 @@
             <img class="header" src="img/cover.jpg" alt="">
             <img class="img" src="img/profile.jpg" alt="">
             <h2>Deepu Kumar</h2>
-            <p>Full-Stack web Developer</p>
+            <p id="typed" class="colored">Full-Stack Web Developer</p>
+
+
+            <ul>
+                <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            </ul>
+
+
+            <div class="footer">
+                <div class="divider rtl"></div>
+                <table>
+                    <tr>
+                        <td>My Resume<a href="#"><ion-icon name="file-tray-full-outline"></ion-icon></a></td>
+                        <td>Contact Me<a href="#"><ion-icon name="call-outline"></ion-icon></a></td>
+                    </tr>
+                </table>
+            </div>
+
         </div>
 <!-- -------------End Profile------------------- -->
 
 
-        <div class="box content">content</div>
+
+<!-- ---------------Start Content------------------- -->
+        <div class="box content">
+            <div class="wrapper">
+
+            
+            <h2>Hey <span class="colored">there!</span></h2>
+
+             <div class="divider ltr"></div>
+        <p><span class="colored">Welcome to my portfolio! I'm Deepu Kumar</span>, a Computer Science and Engineering student at Vignan University, with a strong foundation in Data Structures, Algorithms, and Web Development. I specialize in creating efficient, user-focused web applications using modern technologies like <span class="colored">HTML, CSS, JavaScript, and the MERN stack.</span></p>
+
+
+<!-- ------Start Achivements------- -->
+        <section class="achivements">
+            <div>
+                <h3><ion-icon name="layers-outline"></ion-icon>2</h3>
+                <p>Website Developed</p>
+            </div>
+
+            <div>
+                <h3><ion-icon name="briefcase-outline"></ion-icon>1</h3>
+                <p>Years of Experience</p>
+            </div>
+
+            <div>
+                <h3><ion-icon name="rocket-outline"></ion-icon>10+</h3>
+                <p>Completed Projects</p>
+            </div>
+        </section>
+<!-- ------End Achivements------- -->
+
+
+<!-- ------Start Skills---------- -->
+ <h2>My<span class="colored"> Skills</span></h2>
+ <div class="divider ltr"></div>
+
+ <section class="skills">
+
+    <div><ion-icon name="logo-html5"></ion-icon><p>HTML5</p></div>
+    <div><ion-icon name="logo-css3"></ion-icon><p>CSS</p></div>
+    <div><ion-icon name="logo-javascript"></ion-icon><p>JavaScript</p></div>
+    <div><ion-icon name="logo-react"></ion-icon><p>React</p></div>
+
+    <div><p>C</p></div>
+    <div><p>C++</p></div>
+
+    <div>
+        
+        <div class="circle" style="--percent:60%">
+            <h4>65<small>%</small></h4> 
+        </div>
+        <div><ion-icon name="logo-python"></ion-icon><p>Python</p></div>
+        
     </div>
 
+    <div>
+        <div class="circle" style="--percent:45%">
+            <h4>45<small>%</small></h4>
+        </div>
+        <p>MySQL</p>
+    </div>
+
+    <div>
+        <div class="progress-bar">
+            <p>Node Js<span>70%</span></p>
+            <progress max="100" value="70"></progress>
+        </div>
+
+        <div class="progress-bar">
+            <p>Express Js<span>60%</span></p>
+            <progress max="100" value="60"></progress>
+        </div>
+    </div>
+ </section>
+ <!-- -------End Skills------- -->
+
+
+
+ <!-- ------------------------
+  Start Experience ----------------------- -->
+
+  <h1>My <span class="colored">Experience</span></h1>
+  <div class="divider ltr"></div>
+
+  <section class="experiences">
+   
+
+
+    <div class="experience">
+        <h2>Frontend Developer</h2>
+        <h4>Completed<span class="date">February, 2024</span> &#x26AC;<span class="date">July, 2024</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil ducimus ad cum accusamus numquam porro fugit eligendi cumque voluptatem eaque quia quas, provident aliquam nemo expedita repellat laboriosam sit.
+        Libero quaerat aliquid, corrupti eos assumenda cupiditate, reprehenderit, et saepe voluptate aut totam aperiam maiores ipsam fugit neque inventore explicabo atque vitae rerum nihil provident eligendi! Quidem rem odio soluta.
+       
+        </p>
+    </div>
+
+
+    <div class="experience">
+        <h2>Backend Developer</h2>
+        <h4>Completed<span class="date">August, 2024</span> &#x26AC;<span class="date">December, 2024</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil ducimus ad cum accusamus numquam porro fugit eligendi cumque voluptatem eaque quia quas, provident aliquam nemo expedita repellat laboriosam sit.
+        Libero quaerat aliquid, corrupti eos assumenda cupiditate, reprehenderit, et saepe voluptate aut totam aperiam maiores ipsam fugit neque inventore explicabo atque vitae rerum nihil provident eligendi! Quidem rem odio soluta.
+       
+        </p>
+    </div>
+
+     <div class="experience">
+        <h2>MERN Stack Developer</h2>
+        <h4>Completed<span class="date">January, 2025</span> &#x26AC;<span class="date">July, 2025</span></h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil ducimus ad cum accusamus numquam porro fugit eligendi cumque voluptatem eaque quia quas, provident aliquam nemo expedita repellat laboriosam sit.
+        Libero quaerat aliquid, corrupti eos assumenda cupiditate, reprehenderit, et saepe voluptate aut totam aperiam maiores ipsam fugit neque inventore explicabo atque vitae rerum nihil provident eligendi! Quidem rem odio soluta.
+       
+        </p>
+    </div>
+  </section>
+  <!-- ------------------------
+  End Experience ----------------------- -->
+
+
+
+
+  <!-- contribution -->
+   <h1>My <span class="colored">contributions</span></h1>
+   <div class="divider ltr"></div>
+
+   <section class="contribution">
+    <div class="wrapper">
+        <h4>Upto now no any contribution</h4>
+        <activity-grapg>
+
+
+
+        </activity-grapg>
+    </div>
+   </section>
+
+  </div>
+
+        </div>
+    </div>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
