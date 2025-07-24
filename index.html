@@ -7,6 +7,10 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
     <!-- github contributions link in js format -->
+     <script
+	type="module"
+	src="https://cdn.jsdelivr.net/npm/@mariohamann/activity-graph/dist/activity-graph.min.js"
+></script>
 
     <title>My Portfolio</title>
 </head>
@@ -219,25 +223,89 @@
 
 
   <!-- contribution -->
+
    <h1>My <span class="colored">contributions</span></h1>
    <div class="divider ltr"></div>
 
+   
    <section class="contribution">
-    <div class="wrapper">
-        <h4>Upto now no any contribution</h4>
-        <activity-grapg>
+  <div class="wrapper">
+    <h4>My GitHub Contribution Activity</h4>
+
+     <activity-graph
+  username="Deepukumar12"
+  range-start="2022-05-14"
+  range-end="2025-12-31"
+  activity-levels="0,1,2,3,4"
+   activity-data="2022-05-14,2022-05-15,2022-05-17,2022-05-20,..."
+  first-day-of-week="1"
+  
+></activity-graph>
+  </div>
+</section>
 
 
 
-        </activity-grapg>
+<!-- -----------Projects----------- -->
+
+<h1>My <span class="colored">Projects</span></h1>
+<div class="divider ltr"></div>
+
+<section class="projects">
+    <div class="project-1">
+        <img src="img/project-1.jpg" alt="">
+        <h3>Project <span class="colored">Title-1</span></h3>
     </div>
-   </section>
+
+
+    <div class="project-2">
+        <img src="/img/project-2.jpg" alt="">
+        <h3>Project <span class="colored">Title-2</span></h3>
+    </div>
+
+
+    <div class="project-3">
+        <img src="/img/project-3.jpg" alt="">
+        <h3>Project <span class="colored">Title-3</span></h3>
+    </div>
+
+    <div class="project-4">
+        <img src="/img/project-4.jpg" alt="">
+        <h3>Project <span class="colored">Title-4</span></h3>
+    </div>
+
+    <div class="project-5">
+        <img src="/img/project-5.jpg" alt="">
+        <h3>Project <span class="colored">Title-5</span></h3>
+    </div>
+
+    
+
+    <div class="project-6">
+        <img src="/img/project-6.jpg" alt="">
+        <h3>Project <span class="colored">Title-6</span></h3>
+    </div>
+
+
+    <div class="project-7">
+        <img src="/img/project-7.jpg" alt="">
+        <h3>Project <span class="colored">Title-7</span></h3>
+    </div>
+</section>
+
+
+<!-- ------------Blogs--------------- -->
+ <h1>My <span class="colored">Blogs</span></h1>
+ <div class="divider ltr"></div>
+
 
   </div>
-
-        </div>
+ </div>
     </div>
+
+
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
     <script src="./script.js"></script>
 </body>
 </html>

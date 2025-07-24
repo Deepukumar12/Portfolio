@@ -367,6 +367,109 @@ section {
 
 
 /* Contributions */
+.contribution {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: var(--accent-04) 3px solid;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.contribution activity-graph {
+    padding: 10px 20px;
+    color: var(--accent-02);
+    --activity-graph-text-color: var(--accent-02);
+    --activity-graph-rounded: 2px;
+    --activity-graph-level-0-bg: var(--accent-04);
+    --activity-graph-level-1-bg: #0E4545;
+    --activity-graph-level-2-bg: #006C69;
+    --activity-graph-level-3-bg: #35A0A7;
+    --activity-graph-level-4-bg: #37C9D5;
+}
+
+
+body.light .contribution activity-graph {
+    /* color: var(--accent-04);  */
+    --activity-graph-level-0-bg: #EBEDF0;
+    --activity-graph-level-1-bg: #9BE9A8;
+    --activity-graph-level-2-bg: #40C463;
+    --activity-graph-level-3-bg: #30A14E;
+    --activity-graph-level-4-bg: #216E39;
+}
+
+.contribution > div {
+    overflow: auto;
+}
+
+.contribution figure {
+    overflow: hidden;
+}
+
+.contribution table {
+    border-spacing: 2px;
+}
+
+
+/* -----------------Projects--------------- */
+
+.projects {
+    display: grid;
+    gap: 10px;
+    /* border-color: #111111; */
+}
+
+.project-1 { grid-area: p1; }
+.project-2 { grid-area: p2; }
+.project-3 { grid-area: p3; }
+.project-4 { grid-area: p4; }
+.project-5 { grid-area: p5; }
+.project-6 { grid-area: p6; }
+.project-7 { grid-area: p7; }
+
+
+.projects div img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: .5s;
+    /* border-color: #111111; */
+}
+
+.projects div {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    /* border-color: #111111; */
+}
+
+.projects div:hover img {
+    filter: brightness(.5);
+}
+
+.projects div {
+    position: relative;
+}
+
+.projects h3 {
+    position: absolute;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.projects div:hover h3 {
+    opacity: 1;
+}
+
+body.light .projects h3 {
+    color: var(--accent-04);
+}
+
+
+
 
 /*---------------- Responsiveness ---------------*/
 
@@ -379,6 +482,15 @@ section {
     .skills div:nth-child(9) {
         grid-column: 1/5;
         /* grid-column: 3 / span 2; */
+    }
+
+    .projects {
+        grid-template-areas: 
+        "p1 p2 p2"
+        "p3 p4 p5"
+        "p3 p6 p6"
+        "p7 p6 p6"
+        ;
     }
 }
 
@@ -404,6 +516,16 @@ section {
 
     .skills div:nth-child(9) {
         grid-column: 1/4;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "p1 p2"
+        "p3 p4"
+        "p5 p6"
+        "p7 p7"
+        ;
     }
 }
 
@@ -448,6 +570,20 @@ section {
 
     .skills div:nth-child(9) {
         grid-column: 1/3;
+    }
+
+    
+    .projects {
+        grid-template-columns: repeat(1fr);
+        grid-template-areas: 
+        "p1"
+        "p2"
+        "p3"
+        "p4"
+        "p5"
+        "p6"
+        "p7"
+        ;
     }
     
 }
