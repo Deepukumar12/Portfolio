@@ -465,8 +465,93 @@ body.light .contribution activity-graph {
 }
 
 body.light .projects h3 {
-    color: var(--accent-04);
+    color: var(--accent-04); 
 }
+
+
+
+/* ----------Blogs------------- */
+
+.blogs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.blog-box img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.blog-box {
+    cursor: pointer;
+    border: var(--accent-04) 3px solid;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--accent-04);
+    transition: background-color .5s, border-color .5s;
+}
+
+.blog-box div {
+    padding-top: 10px;
+    border-radius: 10px;
+    transform: background-color .5s;
+}
+
+.blog-box p {
+    color: var(--accent-02);
+}
+
+.blog-box p, .blog-box h3 {
+    margin: 0;
+    transition: color .5s;
+}
+
+.blog-box:hover {
+    border-color: var(--primary-color);
+}
+
+.blog-box:hover h3 {
+    color: var(--primary-color );
+}
+
+.blog-box a, .blog-box ion-icon {
+    color: var(--primary-color);
+    transition: color .5s, padding-left .5s;
+}
+
+.blog-box .link:hover ion-icon {
+    padding-left: 5px;
+}
+
+.blog-box .link {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+
+/* ----------Testimonial----------- */
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.testimonials img {
+    width: 70px;
+    border-radius: 7px;
+    float: left;
+    margin-right: 10px;
+}
+
+.testimonials-box:first-child {
+    
+}
+
+
 
 
 
@@ -584,6 +669,10 @@ body.light .projects h3 {
         "p6"
         "p7"
         ;
+    }
+
+    .blogs {
+        grid-template-columns: 1fr;
     }
     
 }
